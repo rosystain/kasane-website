@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kasane 隐私政策 / Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; --accent: #e61a3c; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 64px;
+    line-height: 1.7;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  .updated { color: #888; font-size: 0.9rem; margin-top: .25rem; }
+  a { color: var(--accent); }
+  .home-link {
+    display: inline-flex; align-items: center; gap: 7px;
+    color: inherit; text-decoration: none;
+    font-weight: 600; font-size: 1rem; margin-bottom: 1.25rem;
+  }
+  .home-link:hover { opacity: .7; }
+  .home-link img { width: 22px; height: 22px; border-radius: 6px; }
+  .lang-switch {
+    display: inline-flex;
+    border: 1px solid rgba(128,128,128,.45);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  .lang-switch button {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: .9rem;
+    padding: 6px 18px;
+    cursor: pointer;
+  }
+  .lang-switch button.active {
+    background: rgba(128,128,128,.25);
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<a class="home-link" href="index.html"><img src="kasaneIcon.svg" alt="">Kasane</a>
+
+<div class="lang-switch" role="group" aria-label="Language / 语言">
+  <button id="btn-zh" type="button" onclick="setLang('zh')">中文</button>
+  <button id="btn-en" type="button" onclick="setLang('en')">English</button>
+</div>
+
+<!-- ======================== 中文 ======================== -->
+<div id="page-zh" lang="zh-Hans">
+<h1>隐私政策</h1>
+<p class="updated">生效日期：2026-08-22</p>
+
+<p>我们非常重视你的隐私。本政策说明 Kasane（下称「本应用」）如何处理数据。</p>
+
+<h2>我们不收集任何数据</h2>
+<p>本应用不收集、不上传、不共享任何个人数据。应用内不含任何统计、分析或追踪组件，开发者无法获取你的使用记录、设备信息或阅读内容。</p>
+
+<h2>本地存储的数据</h2>
+<p>以下数据仅存储在你的设备本地，完全由你掌控：</p>
+<ul>
+  <li>漫画文件与阅读进度（应用文档目录与应用支持目录）；</li>
+  <li>阅读偏好与设置；</li>
+  <li>图片缓存（可随时在设置中清理）。</li>
+</ul>
+<p>本应用开启了「文件 App 共享」，你可以通过 iOS「文件」App 或 macOS Finder 直接查看和整理这些文件，也可以随时删除它们。</p>
+
+<h2>你自建的服务器</h2>
+<p>本应用支持连接由你自己架设（Selfhosted）的服务器：</p>
+<ul>
+  <li>服务器地址与登录凭据仅保存在你的设备上（凭据存于 iOS Keychain），只会发送给你自己指定的服务器用于认证，开发者无法接触这些服务器及其中的数据。</li>
+  <li>为兼容局域网内自建服务器的常见 HTTP 明文部署，本应用允许非加密网络连接。请自行评估所处网络环境的安全性，必要时为服务器配置 HTTPS。</li>
+</ul>
+
+<h2>内购</h2>
+<p>本应用提供一次性买断的内购项目。所有购买均通过 Apple 处理，开发者不接触、不存储任何支付信息。购买记录绑定你的 Apple ID，退款等事宜请通过 Apple 支持办理。</p>
+
+<h2>儿童隐私</h2>
+<p>本应用不面向儿童收集任何信息——事实上，我们不收集任何人的信息。</p>
+
+<h2>政策变更</h2>
+<p>若本政策发生实质性变更，将在应用更新时同步更新本页面。</p>
+
+<h2>联系我们</h2>
+<p>如有任何疑问，请联系：<a href="mailto:kasane.support@icloud.com">kasane.support@icloud.com</a></p>
+</div>
+
+<!-- ======================== English ======================== -->
+<div id="page-en" lang="en" hidden>
+<h1>Privacy Policy</h1>
+<p class="updated">Effective Date: 2026-08-22</p>
+
+<p>Your privacy matters to us. This policy explains how Kasane (the "App") handles data.</p>
+
+<h2>We collect no data</h2>
+<p>The App does not collect, transmit, or share any personal data. It contains no analytics or tracking components of any kind. The developer has no access to your usage, device information, or reading content.</p>
+
+<h2>Data stored locally</h2>
+<p>The following data is stored only on your device and remains entirely under your control:</p>
+<ul>
+  <li>Manga files and reading progress (app Documents and Application Support directories);</li>
+  <li>Reading preferences and settings;</li>
+  <li>Image caches (can be cleared anytime in Settings).</li>
+</ul>
+<p>The App enables File Sharing, so you can view and organize these files via the Files app on iOS or Finder on macOS, and delete them at any time.</p>
+
+<h2>Your self-hosted servers</h2>
+<p>The App can connect to servers that you host yourself (self-hosted):</p>
+<ul>
+  <li>Server addresses and credentials are stored only on your device (credentials in the iOS Keychain) and are sent only to the server you specify, for authentication purposes. The developer has no access to those servers or their data.</li>
+  <li>To support plain-HTTP deployments commonly used for self-hosted servers on local networks, the App permits unencrypted connections. Please assess the security of your network environment and configure HTTPS on your server if needed.</li>
+</ul>
+
+<h2>In-App Purchases</h2>
+<p>The App offers a one-time (non-consumable) purchase. All purchases are processed by Apple; the developer never sees or stores any payment information. Purchases are tied to your Apple ID. For refunds, please contact Apple Support.</p>
+
+<h2>Children's privacy</h2>
+<p>The App does not collect information from children — in fact, it collects no information from anyone.</p>
+
+<h2>Changes to this policy</h2>
+<p>Material changes to this policy will be reflected on this page when the App is updated.</p>
+
+<h2>Contact us</h2>
+<p>If you have any questions, contact us at: <a href="mailto:kasane.support@icloud.com">kasane.support@icloud.com</a></p>
+</div>
+
+<script>
+function setLang(lang) {
+  document.getElementById('page-zh').hidden = lang !== 'zh';
+  document.getElementById('page-en').hidden = lang !== 'en';
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+  try { localStorage.setItem('kasane-policy-lang', lang); } catch (e) {}
+}
+(function () {
+  // 优先级：URL 显式指定(?lang=zh/en，供 App 内跳转定向) > 上次选择 > 浏览器语言
+  var params = new URLSearchParams(location.search);
+  var initial = params.get('lang');
+  if (initial !== 'zh' && initial !== 'en') {
+    try { initial = localStorage.getItem('kasane-policy-lang'); } catch (e) {}
+  }
+  if (initial !== 'zh' && initial !== 'en') {
+    initial = navigator.language.startsWith('zh') ? 'zh' : 'en';
+  }
+  setLang(initial === 'en' ? 'en' : 'zh');
+})();
+</script>
+
+</body>
+</html>
