@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kasane — 为本地与自建漫画库打造的阅读器</title>
-<meta name="description" content="Kasane 是一款为 iOS、iPadOS、macOS 与 Apple Vision Pro 打造的漫画阅读器，支持本地 CBZ/PDF/EPUB 与 OPDS 自建服务器，不收集任何数据。">
+<meta name="description" content="Kasane 是一款为 iOS 与 iPadOS 打造的漫画阅读器，支持本地 CBZ/PDF/EPUB 与 OPDS 自建服务器，不收集任何数据。">
 <meta property="og:title" content="Kasane">
-<meta property="og:description" content="为本地与自建漫画库打造的沉浸式阅读器。iOS · iPadOS · macOS · visionOS">
+<meta property="og:description" content="为本地与自建漫画库打造的沉浸式阅读器。iOS · iPadOS">
 <meta property="og:image" content="kasaneIcon.svg">
 <link rel="icon" type="image/svg+xml" href="kasaneIcon.svg">
 <style>
@@ -37,7 +37,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    line-height: 1.7;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
   a { color: var(--accent); text-decoration: none; }
@@ -192,7 +192,7 @@
   <img class="hero-icon" src="kasaneIcon.svg" alt="Kasane 图标">
   <h1>Kasane</h1>
   <p class="tagline">为本地与自建漫画库打造的沉浸式阅读器</p>
-  <p class="platforms">iOS · iPadOS · macOS · Apple Vision Pro</p>
+  <p class="platforms">iOS · iPadOS</p>
   <div class="cta">
     <!-- TODO: App Store 上架后把 href 替换为正式链接，如 https://apps.apple.com/app/idXXXXXXXXXX -->
     <a class="store-btn" href="https://apps.apple.com/" target="_blank" rel="noopener">
@@ -237,7 +237,7 @@
       <div class="card">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="13" height="12" rx="2"/><path d="M6 20h5"/><path d="M8.5 16v4"/><rect x="17" y="8" width="5" height="12" rx="1.5"/></svg></div>
         <h3>为 Apple 平台而生</h3>
-        <p>以原生 SwiftUI 构建，iPhone、iPad、Mac 与 Apple Vision Pro 上均有一致而流畅的体验。</p>
+        <p>以原生 SwiftUI 构建，在 iPhone 与 iPad 上都有一致而流畅的体验。</p>
       </div>
     </div>
 
@@ -280,7 +280,7 @@
   <img class="hero-icon" src="kasaneIcon.svg" alt="Kasane icon">
   <h1>Kasane</h1>
   <p class="tagline">An immersive manga reader for your local and self-hosted library</p>
-  <p class="platforms">iOS · iPadOS · macOS · Apple Vision Pro</p>
+  <p class="platforms">iOS · iPadOS</p>
   <div class="cta">
     <!-- TODO: Replace href with the real App Store link after release -->
     <a class="store-btn" href="https://apps.apple.com/" target="_blank" rel="noopener">
@@ -325,7 +325,7 @@
       <div class="card">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="13" height="12" rx="2"/><path d="M6 20h5"/><path d="M8.5 16v4"/><rect x="17" y="8" width="5" height="12" rx="1.5"/></svg></div>
         <h3>Built for Apple platforms</h3>
-        <p>Native SwiftUI throughout — a consistent, fluid experience on iPhone, iPad, Mac and Apple Vision Pro.</p>
+        <p>Native SwiftUI throughout — a consistent, fluid experience on iPhone and iPad.</p>
       </div>
     </div>
 
@@ -368,6 +368,14 @@ function setLang(lang) {
   document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+  var i18n = {
+    'nav-features': { zh: '功能', en: 'Features' },
+    'nav-privacy': { zh: '隐私政策', en: 'Privacy Policy' }
+  };
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var t = i18n[el.getAttribute('data-i18n')];
+    if (t) el.textContent = t[lang];
+  });
   try { localStorage.setItem('kasane-policy-lang', lang); } catch (e) {}
 }
 (function () {
