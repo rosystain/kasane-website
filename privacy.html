@@ -16,6 +16,7 @@
   h1 { font-size: 1.6rem; margin-bottom: 0; }
   h2 { font-size: 1.15rem; margin-top: 2rem; }
   .updated { color: #888; font-size: 0.9rem; margin-top: .25rem; }
+  .note { color: #888; font-size: .88em; }
   a { color: var(--accent); }
   .home-link {
     display: inline-flex; align-items: center; gap: 7px;
@@ -78,7 +79,8 @@
 <h2>你自建的服务器</h2>
 <p>本应用支持连接由你自己架设（Selfhosted）的服务器：</p>
 <ul>
-  <li>服务器地址与登录凭据存储在 iOS 钥匙串（Keychain）中，只会发送给你自己指定的服务器用于认证，开发者无法接触这些服务器及其中的数据。若你开启了 iCloud 钥匙串，凭据会经 Apple 的端到端加密在你的个人设备间同步——数据始终属于你，开发者无法访问。</li>
+  <li>服务器地址与登录凭据存储在 iOS 钥匙串中，只会发送给你自己指定的服务器用于认证，开发者无法接触这些服务器及其中的数据。<br>
+  <span class="note">开启 iCloud 钥匙串时，凭据会经 Apple 端到端加密在你的个人设备间同步，数据始终属于你，开发者无法访问。</span></li>
   <li>为兼容局域网内自建服务器的常见 HTTP 明文部署，本应用允许非加密网络连接。请自行评估所处网络环境的安全性，必要时为服务器配置 HTTPS。</li>
 </ul>
 
@@ -117,7 +119,8 @@
 <h2>Your self-hosted servers</h2>
 <p>The App can connect to servers that you host yourself (self-hosted):</p>
 <ul>
-  <li>Server addresses and credentials are stored in the iOS Keychain and are sent only to the server you specify, for authentication purposes. The developer has no access to those servers or their data. If iCloud Keychain is enabled, credentials sync across your own devices with Apple's end-to-end encryption — the data remains yours; the developer cannot access it.</li>
+  <li>Server addresses and credentials are stored in the iOS Keychain and are sent only to the server you specify, for authentication purposes. The developer has no access to those servers or their data.<br>
+  <span class="note">If iCloud Keychain is enabled, credentials sync across your own devices with Apple's end-to-end encryption — the data remains yours; the developer cannot access it.</span></li>
   <li>To support plain-HTTP deployments commonly used for self-hosted servers on local networks, the App permits unencrypted connections. Please assess the security of your network environment and configure HTTPS on your server if needed.</li>
 </ul>
 
